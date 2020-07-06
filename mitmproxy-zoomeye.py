@@ -4,7 +4,7 @@ version: 0.1
 usage:
 1. start mitmproxy
 $ mitmdump -s zoomeye.py "~d zoomeye.org & '/search'"
-2. set browser proxy with mitmproxy address
+2. set browser proxy with mitmproxy address like 'http://127.0.0.1:8080'
 3. searching on zoomeye, result will be save in result.txt
 """
 

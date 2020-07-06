@@ -31,3 +31,12 @@ then generate MOF file:
 ```
 $ python3 generate-mof-reverse-shell-file.py reverse_shell.vbs > reverse_shell.mof
 ```
+## mitmproxy-zoomeye.py
+
+Mitmproxy zoomeye proxy, grab zoomeye search hosts to file
+1. start mitmproxy
+```shell
+$ mitmdump -s zoomeye.py "~d zoomeye.org & '/search'"
+```
+2. set browser proxy with mitmproxy address
+3. searching on zoomeye, result will be save in result.txt

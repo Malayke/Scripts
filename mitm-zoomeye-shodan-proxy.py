@@ -15,8 +15,8 @@ import json
 from bs4 import BeautifulSoup
 
 
-def grab_zoomeye(result):
-    with open("sonarqube-new.txt","a") as f:
+def grab_zoomeye(result) -> None:
+    with open("zoomeye-result.txt","a") as f:
         # cat /tmp/zoomeye.json | jq -r '.matches[] | .ip, .portinfo.port, .portinfo.service'| less
         for target in result['matches']:
             ip = target['ip']
@@ -36,9 +36,9 @@ def grab_zoomeye(result):
                 # print(url)
                 f.write(f"{url}\n")
 
-def grab_shadan(response):
+def grab_shadan(response) -> None:
     soup = BeautifulSoup(response, 'html.parser')
-    with open("shodan.txt","a") as f:
+    with open("shodan-result.txt","a") as f:
         for a in soup.find_all("a", class_="fa fa-external-link"):
             f.write(f"{a['href']}\n")
 

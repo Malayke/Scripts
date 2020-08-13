@@ -20,7 +20,6 @@ def grab_zoomeye(result) -> None:
         # cat /tmp/zoomeye.json | jq -r '.matches[] | .ip, .portinfo.port, .portinfo.service'| less
         for target in result['matches']:
             ip = target['ip']
-            print(ip)
             port = target['portinfo']['port']
             protocol = target['portinfo']['service']
             if 'https' in protocol and port == 443:

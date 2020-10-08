@@ -34,6 +34,7 @@ $ python3 generate-mof-reverse-shell-file.py reverse_shell.vbs > reverse_shell.m
 ## mitmproxy-zoomeye.py
 
 Mitmproxy zoomeye proxy, grab zoomeye search hosts to file
+> before start import `~/.mitmproxy/mitmproxy-ca-cert.pem` to firefox
 1. start mitmproxy
 ```shell
 $ mitmdump -s zoomeye.py "~d zoomeye.org & '/search'"
